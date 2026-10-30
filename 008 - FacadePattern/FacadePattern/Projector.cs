@@ -8,7 +8,8 @@ namespace FacadePattern
 {
     internal class Projector
     {
-        private DvdPlayer _dvdPlayer;
+        // Nullable (?): de input wordt pas later gekozen via SetInput
+        private DvdPlayer? _dvdPlayer;
         public Projector()
         {
         }

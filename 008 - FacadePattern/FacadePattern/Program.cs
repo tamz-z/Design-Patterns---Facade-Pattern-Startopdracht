@@ -21,6 +21,17 @@ namespace FacadePattern
             homeTheater.WatchMovie("Die Hard");
             Console.WriteLine();
             homeTheater.EndMovie();
+            Console.WriteLine();
+
+            // Ook CD en radio luisteren gaat met één aanroep via de Facade
+            homeTheater.ListenToCd();
+            Console.WriteLine();
+            homeTheater.EndCd();
+            Console.WriteLine();
+
+            homeTheater.ListenToRadio();
+            Console.WriteLine();
+            homeTheater.EndRadio();
         }
     }
 }

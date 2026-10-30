@@ -8,9 +8,10 @@ namespace FacadePattern
 {
     internal class Amplifier
     {
-        private Tuner _tuner;
-        private DvdPlayer _dvdPlayer;
-        private CdPlayer _cdPlayer;
+        // Nullable (?): de input wordt pas later gekozen via SetTuner/SetDvd/SetCd
+        private Tuner? _tuner;
+        private DvdPlayer? _dvdPlayer;
+        private CdPlayer? _cdPlayer;
 
         public void On()
         {

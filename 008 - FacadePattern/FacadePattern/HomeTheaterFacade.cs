@@ -75,5 +75,54 @@ namespace FacadePattern
             _dvdPlayer.Eject();
             _dvdPlayer.Off();
         }
+
+        public void ListenToCd()
+        {
+            Console.WriteLine("--- CD luisteren ---");
+
+            _lights.On();
+
+            _amp.On();
+            _amp.SetCd(_cdPlayer);
+            _amp.SetStereoSound();
+            _amp.SetVolume(5);
+
+            _cdPlayer.On();
+            _cdPlayer.Play();
+        }
+
+        public void EndCd()
+        {
+            Console.WriteLine("--- CD stoppen ---");
+
+            _cdPlayer.Stop();
+            _cdPlayer.Eject();
+            _cdPlayer.Off();
+
+            _amp.Off();
+        }
+
+        public void ListenToRadio()
+        {
+            Console.WriteLine("--- Radio luisteren ---");
+
+            _tuner.On();
+            _tuner.SetFM();
+            _tuner.SetFrequency();
+
+            _amp.On();
+            _amp.SetTuner(_tuner);
+            _amp.SetStereoSound();
+            _amp.SetVolume(5);
+        }
+
+        public void EndRadio()
+        {
+            Console.WriteLine("--- Radio stoppen ---");
+
+            _tuner.Off();
+
+            _amp.Off();
+        }
     }
 }

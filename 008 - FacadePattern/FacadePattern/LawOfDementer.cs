@@ -26,21 +26,22 @@ namespace FacadePattern
             LawOfDementer creationClass = new LawOfDementer();
             creationClass.doSomething();
         }
-        private LawOfDementer uninstantiatedComponent;
+        private LawOfDementer? uninstantiatedComponent;
         public void MethodCallOfInstantiation()
         {
             uninstantiatedComponent = new LawOfDementer();
             uninstantiatedComponent.doSomething();
         }
 
-        private LawOfDementer ComposedComponent;
+        // Nullable (?): via de lege constructor wordt dit component niet gezet
+        private LawOfDementer? ComposedComponent;
         public LawOfDementer(LawOfDementer lawOfDementer)
         {
             ComposedComponent = lawOfDementer;
         }
         public void MethodCallOfComponent()
         {
-            ComposedComponent.doSomething();
+            ComposedComponent?.doSomething();
         }
     }
 }

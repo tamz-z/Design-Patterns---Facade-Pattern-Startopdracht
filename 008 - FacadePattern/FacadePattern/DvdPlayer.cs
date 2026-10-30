@@ -38,7 +38,7 @@ namespace FacadePattern
         {
             Console.WriteLine("DVD speler op surround audio");
         }
-        public void SetTWoChannelAudio()
+        public void SetTwoChannelAudio()
         {
             Console.WriteLine("DVD speler op two channel audio");
         }
